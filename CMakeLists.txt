@@ -33,9 +33,9 @@ include(01-core)
 include(02-opts)
 include(04-targets)
 
-if(BUILD_DOC)
-  add_subdirectory(doc)
-endif()
+# if(BUILD_DOC)
+#   add_subdirectory(doc)
+# endif()
 
 if (BUILD_SHELL)
   add_subdirectory(contrib/bash)
@@ -61,10 +61,10 @@ if(BUILD_TESTS)
 endif()
 
 
-if(BUILD_CONFIG)
-  install(FILES ${CMAKE_SOURCE_DIR}/doc/config.ini
-    DESTINATION /etc/${PROJECT_NAME}
-    COMPONENT config)
-endif()
+# if(BUILD_CONFIG)
+#   install(FILES ${CMAKE_SOURCE_DIR}/doc/config.ini
+#     DESTINATION /etc/${PROJECT_NAME}
+#     COMPONENT config)
+# endif()
 
 include(05-summary)
